@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Fisheye Media Ltd. All rights reserved.
+ * See LICENCE.txt for licence details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="product_image_lazyload"
+                   translate="label"
+                   sortOrder="999"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>Product Image Lazyload</label>
+                <field id="enabled"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="1"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <label>Enable lazy loading of product images</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
