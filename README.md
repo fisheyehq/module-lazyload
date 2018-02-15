@@ -18,6 +18,7 @@ A Magento 2 module that adds support for lazy loading of images.
 * Support can be added to any further images by adding the following to `<img>` elements:
 	* Add `lazyload` class
 	* Change the `src` attribute to `data-src`
+	* Optional: add a dummy `src` with transparent 1px x 1px image to avoid broken image links prior to lazy load (see product image templates as example) 
 
 ## Compatibility
 
