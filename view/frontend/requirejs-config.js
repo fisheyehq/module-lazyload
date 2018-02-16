@@ -3,7 +3,7 @@
  * See LICENCE.txt for licence details.
  */
 var config = {
-	deps: [
-        'Fisheye_Lazyload/js/lazysizes.min'
-	]
+    paths: {
+        'fisheye/lazyload': 'Fisheye_Lazyload/js/lazysizes.min'
+    }
 };
