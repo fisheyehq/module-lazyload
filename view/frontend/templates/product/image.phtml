@@ -1,0 +1,15 @@
+<?php
+/**
+ * Copyright © Fisheye Media Ltd. All rights reserved.
+ * See LICENCE.txt for licence details.
+ */
+?>
+<?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
+
+<img class="photo image lazyload"
+    <?= /* @escapeNotVerified */ $block->getCustomAttributes() ?>
+     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+     data-src="<?= /* @escapeNotVerified */ $block->getImageUrl() ?>"
+     width="<?= /* @escapeNotVerified */ $block->getWidth() ?>"
+     height="<?= /* @escapeNotVerified */ $block->getHeight() ?>"
+     alt="<?= /* @escapeNotVerified */ $block->stripTags($block->getLabel(), null, true) ?>" />
