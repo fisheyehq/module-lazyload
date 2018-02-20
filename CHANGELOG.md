@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.2] - 2018-02-20
+* Refactor preference to plugin to provide better interoperability with other modules
+
+## [1.0.1] - 2018-02-17
+* Add missing licence in `composer.json`
+
 ## [1.0.0] - 2018-02-15
 ### Added
 * Add lazysizes script to support image lazy loading
