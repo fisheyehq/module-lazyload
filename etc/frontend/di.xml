@@ -7,6 +7,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Magento\Catalog\Block\Product\Image"
-                type="Fisheye\Lazyload\Preference\OverrideProductImageTemplates"/>
+    <type name="Magento\Catalog\Block\Product\Image">
+        <plugin name="lazyloadImages" type="Fisheye\Lazyload\Plugin\Block\Product\Image" />
+    </type>
 </config>
