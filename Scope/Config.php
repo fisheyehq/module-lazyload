@@ -9,6 +9,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class Config
 {
+    /** Stores configuration paths */
     const XML_PATH_CATALOG_PRODUCT_IMAGE_LAZYLOAD_ENABLED = 'catalog/product_image_lazyload/enabled';
 
     /**
@@ -16,20 +17,12 @@ class Config
      */
     private $scopeConfig;
 
-    /**
-     * Config constructor.
-     *
-     * @param ScopeConfigInterface $scopeConfig
-     */
     public function __construct(ScopeConfigInterface $scopeConfig)
     {
         $this->scopeConfig = $scopeConfig;
     }
 
-    /**
-     * @return bool
-     */
-    public function isProductImageLazyloadingEnabled()
+    public function isProductImageLazyloadingEnabled(): bool
     {
         return $this->scopeConfig->isSetFlag(self::XML_PATH_CATALOG_PRODUCT_IMAGE_LAZYLOAD_ENABLED);
     }

@@ -5,21 +5,27 @@
  */
 namespace Fisheye\Lazyload\Plugin;
 
+use Fisheye\Lazyload\Scope\Config;
 use Magento\Catalog\Block\Product\Image as ImageSubject;
 
 class OverrideProductImageTemplate
 {
-
     /**
-     * Plugin for lazyloading images - Set template to Fisheye_Lazyload
-     *
-     * @param ImageSubject $subject
-     * @param $template
-     * @return array
+     * @var Config
      */
-    public function beforeSetTemplate(ImageSubject $subject, $template)
+    private $config;
+
+    public function __construct(Config $config)
     {
-        $template = str_replace('Magento_Catalog', 'Fisheye_Lazyload', $template);
+        $this->config = $config;
+    }
+
+    public function beforeSetTemplate(ImageSubject $subject, string $template): array
+    {
+        if ($this->config->isProductImageLazyloadingEnabled()) {
+            // Set template to Fisheye_Lazyload
+            $template = str_replace('Magento_Catalog', 'Fisheye_Lazyload', $template);
+        }
         return [$template];
     }
 }
