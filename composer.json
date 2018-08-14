@@ -4,12 +4,12 @@
     "type": "magento2-module",
     "license": "MIT",
     "require": {
-        "magento/module-catalog": "^100.0|^101.0|^102.0"
+        "magento/module-catalog": "^102.0"
     },
     "authors": [
         {
-            "name": "Fisheye Web Design",
-            "homepage": "http://fisheye-webdesign.co.uk/"
+            "name": "Fisheye Media Ltd.",
+            "homepage": "https://fisheye-webdesign.co.uk/"
         },
         {
             "name": "John Hughes",

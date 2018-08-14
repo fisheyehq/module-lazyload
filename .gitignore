@@ -34,7 +34,8 @@ ehthumbs.db
 Thumbs.db
 *.swp
 
-############
-# PHPStorm #
-############
+########
+# IDEs #
+########
 /.idea
+/.vscode
