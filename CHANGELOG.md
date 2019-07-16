@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.0] - 2019-07-16
+* Added: Magento 2.3 support
+* Added: move JS to base area to support admin
+* Added: latest lazysizes script
+
 ## [2.0.0] - 2018-10-01
 * Changed: genreal refactoring
 * Fixed: module enable / disable check
