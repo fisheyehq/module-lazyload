@@ -13,7 +13,7 @@
             <?= /* @escapeNotVerified */ $block->getCustomAttributes() ?>
              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
              data-src="<?= $block->escapeUrl($block->getImageUrl()) ?>"
-             width="<?= $block->escapeHtmlAttr($block->getResizedImageWidth()) ?>"
-             height="<?= $block->escapeHtmlAttr($block->getResizedImageHeight()) ?>"
+             max-width="<?= $block->escapeHtmlAttr($block->getWidth()) ?>"
+             max-height="<?= $block->escapeHtmlAttr($block->getHeight()) ?>"
              alt="<?= $block->escapeHtmlAttr($block->stripTags($block->getLabel(), null, true)) ?>"/></span>
 </span>
