@@ -28,12 +28,14 @@ define([
 
         // For each <item> node in the 'preload_elements' layout argument
         for (key in selectors) {
-            $preloadElements = $(selectors[key]);
+            if (Object.prototype.hasOwnProperty.call(selectors, key)) {
+                $preloadElements = $(selectors[key]);
 
-            // For each element in the collection, unveil it
-            $preloadElements.each(function () {
-                lazySizes.loader.unveil(this);
-            });
+                // For each element in the collection, unveil it
+                $preloadElements.each(function () {
+                    lazySizes.loader.unveil(this);
+                });
+            }
         }
     };
 });

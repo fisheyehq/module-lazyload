@@ -12,7 +12,7 @@ use Magento\Framework\Serialize\SerializerInterface;
 class Preload extends Template
 {
     /**
-     * @var SerializerInterface 
+     * @var SerializerInterface
      */
     protected $serializer;
 
