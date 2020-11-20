@@ -15,7 +15,7 @@
                    showInDefault="1"
                    showInWebsite="1"
                    showInStore="1">
-                <label>Product Image Lazyload</label>
+                <label>Image Lazyloading</label>
                 <field id="enabled"
                        translate="label comment"
                        type="select"
@@ -26,6 +26,21 @@
                        canRestore="1">
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <label>Enable lazy loading of product images</label>
+                </field>
+                <field id="preload"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="20"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <label>Preload Images</label>
+                    <comment>
+                        Load images before they are within the user's viewport.
+                        This will only affect images defined via layout arguments by a developer.
+                    </comment>
                 </field>
             </group>
         </section>
