@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Fisheye Media Ltd. All rights reserved.
+ * See LICENCE.txt for licence details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block name="lazyload.preload.config"
+                   class="Fisheye\Lazyload\Block\Preload"
+                   template="Fisheye_Lazyload::preload.phtml"
+                   ifconfig="catalog/product_image_lazyload/preload">
+                <arguments>
+                    <!--
+                     *  Item "name" attribute should be descriptive to the area
+                     *  Item value should be a CSS selector vage enough to select groups of elements for efficiency
+                     -->
+                    <argument name="preload_elements" xsi:type="array">
+                        <item name="header_images" xsi:type="string">header .lazyload</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © Fisheye Media Ltd. All rights reserved.
+ * See LICENCE.txt for licence details.
+ */
+/** @var Fisheye\Lazyload\Block\Preload $block */
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Fisheye_Lazyload/js/preload": <?= /* @noEscape */ $block->getJsConfig() ?>
+        }
+    }
+</script>
