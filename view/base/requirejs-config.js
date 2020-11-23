@@ -7,5 +7,8 @@ var config = {
         '*': {
             'lazysizes': 'Fisheye_Lazyload/js/lazysizes.min',
         }
-    }
+    },
+    deps: [
+        'lazysizes'
+    ],
 };

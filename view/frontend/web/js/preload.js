@@ -19,8 +19,10 @@ define([
 
         if (!config
             || !config.preload_selectors
-            || $.isEmptyObject(config.preload_selectors)) {
-            // Do nothing if no selectors
+            || $.isEmptyObject(config.preload_selectors)
+            || !window.lazySizes
+        ) {
+            // Do nothing if no selectors or lazySizes not found
             return;
         }
 

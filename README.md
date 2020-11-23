@@ -22,6 +22,7 @@ A Magento 2 module that adds support for lazy loading of images.
 * Preloading
     * Preloading means the media source will be loaded even if not in the viewport such as megamenu icons/images.
     * The `preload_elements` layout argument allows you to specify selectors of which elements can be preloaded. This can be configured per page.
+    * Use the `lazypreload` class on element(s) you wish to preload.
 
 ## Compatibility
 
