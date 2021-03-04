@@ -4,16 +4,24 @@
  * See LICENCE.txt for licence details.
  */
 /** @var Magento\Catalog\Block\Product\Image $block */
+$label = $block->stripTags($block->getLabel(), null, true);
+$customAttributes = $block->getCustomAttributes();
 ?>
 <span class="product-image-container"
       style="width:<?= $block->escapeHtmlAttr($block->getWidth()) ?>px;">
     <span class="product-image-wrapper"
           style="padding-bottom: <?= $block->escapeHtmlAttr(($block->getRatio() * 100)) ?>%;">
-        <img class="product-image-photo lazyload"
-            <?= /* @escapeNotVerified */ $block->getCustomAttributes() ?>
+        <img class="product-image-photo lazyload <?= $block->escapeHtmlAttr($block->getClass()) ?>"
+             <?php if (is_array($customAttributes)) : ?>
+                 <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+                     <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+                 <?php endforeach; ?>
+             <?php else: ?>
+                 <?= $block->escapeHtmlAttr($customAttributes) ?>
+             <?php endif; ?>
              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
              data-src="<?= $block->escapeUrl($block->getImageUrl()) ?>"
              max-width="<?= $block->escapeHtmlAttr($block->getWidth()) ?>"
              max-height="<?= $block->escapeHtmlAttr($block->getHeight()) ?>"
-             alt="<?= $block->escapeHtmlAttr($block->stripTags($block->getLabel(), null, true)) ?>"/></span>
+             alt="<?= $block->escapeHtmlAttr($label) ?>" /></span>
 </span>
