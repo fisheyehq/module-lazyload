@@ -9,16 +9,16 @@ $label = $block->stripTags($block->getLabel(), null, true);
 $customAttributes = $block->getCustomAttributes();
 ?>
 <img class="photo image lazyload <?= $escaper->escapeHtmlAttr($block->getClass()) ?>"
-     loading="lazy"
-     <?php if (is_array($customAttributes)) : ?>
-         <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
-             <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
-         <?php endforeach; ?>
-     <?php else: ?>
-         <?= $block->escapeHtmlAttr($customAttributes) ?>
-     <?php endif; ?>
-     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-     data-src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
-     width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
-     height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
-     alt="<?= $escaper->escapeHtmlAttr($label) ?>" />
+    loading="lazy"
+    <?php if (is_array($customAttributes)): ?>
+        <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+            <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+        <?php endforeach; ?>
+    <?php else: ?>
+        <?= $block->escapeHtmlAttr($customAttributes) ?>
+    <?php endif; ?>
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+    data-src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
+    width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+    height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+    alt="<?= $escaper->escapeHtmlAttr($label) ?>" />

@@ -13,16 +13,17 @@ $customAttributes = $block->getCustomAttributes();
           style="padding-bottom: <?= $block->escapeHtmlAttr(($block->getRatio() * 100)) ?>%;">
         <img class="product-image-photo lazyload <?= $block->escapeHtmlAttr($block->getClass()) ?>"
             loading="lazy"
-             <?php if (is_array($customAttributes)) : ?>
-                 <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
-                     <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
-                 <?php endforeach; ?>
-             <?php else: ?>
-                 <?= $block->escapeHtmlAttr($customAttributes) ?>
-             <?php endif; ?>
-             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-             data-src="<?= $block->escapeUrl($block->getImageUrl()) ?>"
-             max-width="<?= $block->escapeHtmlAttr($block->getWidth()) ?>"
-             max-height="<?= $block->escapeHtmlAttr($block->getHeight()) ?>"
-             alt="<?= $block->escapeHtmlAttr($label) ?>" /></span>
+            <?php if (is_array($customAttributes)): ?>
+                <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+                    <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+                <?php endforeach; ?>
+            <?php else: ?>
+                <?= $block->escapeHtmlAttr($customAttributes) ?>
+            <?php endif; ?>
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            data-src="<?= $block->escapeUrl($block->getImageUrl()) ?>"
+            max-width="<?= $block->escapeHtmlAttr($block->getWidth()) ?>"
+            max-height="<?= $block->escapeHtmlAttr($block->getHeight()) ?>"
+            alt="<?= $block->escapeHtmlAttr($label) ?>" />
+    </span>
 </span>
