@@ -9,6 +9,7 @@ $label = $block->stripTags($block->getLabel(), null, true);
 $customAttributes = $block->getCustomAttributes();
 ?>
 <img class="photo image lazyload <?= $escaper->escapeHtmlAttr($block->getClass()) ?>"
+     loading="lazy"
      <?php if (is_array($customAttributes)) : ?>
          <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
              <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"

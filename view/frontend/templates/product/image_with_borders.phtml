@@ -12,6 +12,7 @@ $customAttributes = $block->getCustomAttributes();
     <span class="product-image-wrapper"
           style="padding-bottom: <?= $block->escapeHtmlAttr(($block->getRatio() * 100)) ?>%;">
         <img class="product-image-photo lazyload <?= $block->escapeHtmlAttr($block->getClass()) ?>"
+            loading="lazy"
              <?php if (is_array($customAttributes)) : ?>
                  <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
                      <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
