@@ -2,11 +2,10 @@
  * Copyright © Fisheye Media Ltd. All rights reserved.
  * See LICENCE.txt for licence details.
  */
-/* global lazySizes */
 define([
     'jquery',
     'lazysizes',
-], function ($) {
+], function ($, lazySizes) {
     'use strict';
 
     /**
@@ -17,10 +16,10 @@ define([
             key,
             $preloadElements;
 
-        if (!config
+        if (!lazySizes
+            || !config
             || !config.preload_selectors
             || $.isEmptyObject(config.preload_selectors)
-            || !window.lazySizes
         ) {
             // Do nothing if no selectors or lazySizes not found
             return;
