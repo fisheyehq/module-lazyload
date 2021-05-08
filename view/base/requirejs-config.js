@@ -10,6 +10,7 @@ var config = {
     },
     deps: [
         'lazysizes',
+        'Fisheye_Lazyload/js/ls.native-loading.min',
     ],
     shim: {
         'Fisheye_Lazyload/js/lazysizes.min': {
