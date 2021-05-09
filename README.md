@@ -26,7 +26,7 @@ A Magento 2 module that adds support for lazy loading of images.
 
 ## Compatibility
 
-* Magento Community Edition / Enterprise Edition 2.2.x (see older releases for 2.0 / 2.1 support)
+* Magento Community Edition / Enterprise Edition 2.2.x, 2.3.x, 2.4.x (see older releases for 2.0 / 2.1 support)
 * Supports Magento 2 Full Page Cache (including Varnish)
 
 ## Installation
