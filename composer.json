@@ -1,8 +1,8 @@
 {
     "name": "fisheye/module-lazyload",
-    "type": "magento2-module",
     "description": "A Magento 2 module that adds support for lazy loading of images.",
     "license": "MIT",
+    "type": "magento2-module",
     "authors": [
         {
             "name": "Fisheye Media Ltd.",
