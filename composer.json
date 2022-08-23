@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "magento/module-catalog": "^102.0 || ^103.0 || ^104.0"
+        "magento/module-catalog": "^104.0"
     },
     "autoload": {
         "psr-4": {
