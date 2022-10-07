@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Fisheye Media Ltd. All rights reserved.
+ * See LICENCE.txt for licence details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!--
+         Ideally we wouldn't use lazysizes here, and would rely on native loading features.
+         This is legacy support for existing sites that are expected to have content that uses older markup.
+         -->
+        <script src="Fisheye_Lazyload/js/lazysizes.min.js" async="async" />
+        <script src="Fisheye_Lazyload/js/ls.native-loading.min.js" async="async" />
+    </head>
+    <body>
+        <!-- Preloading feature not supported for Hyva themes -->
+        <referenceBlock name="lazyload.preload.config" remove="true"/>
+    </body>
+</page>

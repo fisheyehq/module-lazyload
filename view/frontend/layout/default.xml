@@ -16,7 +16,7 @@
                 <arguments>
                     <!--
                      *  Item "name" attribute should be descriptive to the area
-                     *  Item value should be a CSS selector vage enough to select groups of elements for efficiency
+                     *  Item value should be a CSS selector vague enough to select groups of elements for efficiency
                      -->
                     <argument name="preload_elements" xsi:type="array">
                         <item name="header_images" xsi:type="string">header .lazyload</item>

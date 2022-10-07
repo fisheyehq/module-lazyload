@@ -10,7 +10,6 @@
     <default>
         <catalog>
             <product_image_lazyload>
-                <enabled>1</enabled>
                 <preload>1</preload>
             </product_image_lazyload>
         </catalog>

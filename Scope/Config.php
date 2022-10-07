@@ -11,7 +11,6 @@ use Magento\Store\Model\ScopeInterface;
 class Config
 {
     /** Stores configuration paths */
-    const XML_PATH_CATALOG_PRODUCT_IMAGE_LAZYLOAD_ENABLED = 'catalog/product_image_lazyload/enabled';
     const XML_PATH_CATALOG_IMAGE_PRELOAD_ENABLED = 'catalog/product_image_lazyload/preload';
 
     /**
@@ -24,18 +23,10 @@ class Config
         $this->scopeConfig = $scopeConfig;
     }
 
-    public function isProductImageLazyloadingEnabled(): bool
-    {
-        return $this->scopeConfig->isSetFlag(
-            self::XML_PATH_CATALOG_PRODUCT_IMAGE_LAZYLOAD_ENABLED,
-            ScopeInterface::SCOPE_STORE
-        );
-    }
-
     public function isImagePreloadingEnabled(): bool
     {
         return $this->scopeConfig->isSetFlag(
-            self::XML_PATH_CATALOG_PRODUCT_IMAGE_LAZYLOAD_ENABLED,
+            self::XML_PATH_CATALOG_IMAGE_PRELOAD_ENABLED,
             ScopeInterface::SCOPE_STORE
         );
     }
